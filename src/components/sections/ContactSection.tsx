@@ -118,25 +118,25 @@ const ContactSection = () => {
 	}
 
 	return (
-		<section id='contact' className='py-20 bg-gray-50'>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='text-center mb-12'>
-					<h2 className='text-2xl md:text-3xl font-bold text-gray-900 mb-4'>
+		<section id='contact' className='py-12 sm:py-16 md:py-20 bg-gray-50'>
+			<div className='max-w-7xl mx-auto px-3 sm:px-4 lg:px-8'>
+				<div className='text-center mb-8 sm:mb-10 md:mb-12'>
+					<h2 className='text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4'>
 						Bugun Boshlang
 					</h2>
-					<p className='text-base md:text-lg text-gray-600 max-w-2xl mx-auto'>
+					<p className='text-sm sm:text-base md:text-lg text-gray-600 max-w-xl sm:max-w-2xl mx-auto px-2'>
 						Chet elda o&apos;qish safaringizni boshlashga tayyormisiz? Bepul
 						maslahat va shaxsiy yondashuv uchun biz bilan bog&apos;laning.
 					</p>
 				</div>
 
-				<div className='grid lg:grid-cols-2 gap-12'>
+				<div className='grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12'>
 					{/* Contact Form */}
-					<div className='bg-white rounded-xl shadow-lg p-8'>
-						<div className='flex items-center mb-6'>
-							<div className='w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3'>
+					<div className='bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8'>
+						<div className='flex items-center mb-4 sm:mb-6'>
+							<div className='w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-2 sm:mr-3'>
 								<svg
-									className='w-5 h-5 text-blue-600'
+									className='w-4 h-4 sm:w-5 sm:h-5 text-blue-600'
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -149,12 +149,12 @@ const ContactSection = () => {
 									/>
 								</svg>
 							</div>
-							<h3 className='text-xl font-bold text-gray-900'>
+							<h3 className='text-lg sm:text-xl font-bold text-gray-900'>
 								Bizga Xabar Yuboring
 							</h3>
 						</div>
 
-						<form onSubmit={handleSubmit} className='space-y-6'>
+						<form onSubmit={handleSubmit} className='space-y-4 sm:space-y-6'>
 							<div>
 								<Label
 									htmlFor='name'
@@ -168,7 +168,7 @@ const ContactSection = () => {
 									value={formData.name}
 									onChange={handleInputChange}
 									required
-									className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black'
+									className='w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black text-sm sm:text-base'
 									placeholder='Ismingizni kiriting'
 								/>
 							</div>
@@ -186,7 +186,7 @@ const ContactSection = () => {
 									value={formData.phone}
 									onChange={handleInputChange}
 									required
-									className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black'
+									className='w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black text-sm sm:text-base'
 									placeholder='+998 90 123 45 67'
 								/>
 							</div>
@@ -204,15 +204,15 @@ const ContactSection = () => {
 									value={formData.message}
 									onChange={handleInputChange}
 									required
-									rows={4}
-									className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black resize-none'
+									rows={3}
+									className='w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white text-black resize-none text-sm sm:text-base'
 									placeholder='Akademik maqsadlaringiz haqida va biz qanday yordam bera olishimiz haqida gapiring...'
 								/>
 							</div>
 
 							<Button
 								type='submit'
-								className='w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm'
+								className='w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2.5 sm:py-3 px-4 rounded-lg transition-colors duration-200 text-sm sm:text-base'
 								disabled={isSubmitting}
 							>
 								{isSubmitting ? 'Yuborilmoqda...' : 'Xabar Yuborish'}
@@ -221,31 +221,31 @@ const ContactSection = () => {
 					</div>
 
 					{/* Contact Information */}
-					<div className='space-y-6'>
+					<div className='space-y-4 sm:space-y-6'>
 						<div>
-							<h3 className='text-lg font-bold text-gray-900 mb-4'>
+							<h3 className='text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4'>
 								Bog&apos;lanish Ma&apos;lumotlari
 							</h3>
-							<p className='text-gray-600 text-sm leading-relaxed mb-6'>
+							<p className='text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6'>
 								Bizning ekspert maslahatchilarimiz yo&apos;lda har bir qadamda
 								yordam berish uchun bu yerda. Quyidagi kanallardan birortasi
 								orqali biz bilan bog&apos;laning.
 							</p>
 						</div>
 
-						<div className='space-y-4'>
+						<div className='space-y-3 sm:space-y-4'>
 							{contactInfo.map((info, index) => (
 								<div key={index} className='flex items-start space-x-3'>
 									<div className='flex-shrink-0'>
-										<div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
-											<info.icon className='h-4 w-4 text-blue-600' />
+										<div className='w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+											<info.icon className='h-3 w-3 sm:h-4 sm:w-4 text-blue-600' />
 										</div>
 									</div>
 									<div>
-										<h4 className='text-sm font-semibold text-gray-900 mb-1'>
+										<h4 className='text-xs sm:text-sm font-semibold text-gray-900 mb-1'>
 											{info.title}
 										</h4>
-										<p className='text-gray-900 font-medium mb-1 text-sm'>
+										<p className='text-gray-900 font-medium mb-1 text-xs sm:text-sm'>
 											{info.details}
 										</p>
 										<p className='text-gray-600 text-xs'>{info.description}</p>
@@ -256,8 +256,8 @@ const ContactSection = () => {
 
 						{/* Quick Response Promise */}
 						<Card className='bg-gradient-to-r from-blue-50 to-indigo-50 border-0'>
-							<CardContent className='p-4'>
-								<h4 className='text-sm font-semibold text-gray-900 mb-2'>
+							<CardContent className='p-3 sm:p-4'>
+								<h4 className='text-xs sm:text-sm font-semibold text-gray-900 mb-2'>
 									Tez Javob Kafolati
 								</h4>
 								<p className='text-gray-600 text-xs'>

@@ -87,13 +87,13 @@ const ServicesSection = () => {
 	]
 
 	return (
-		<section id='services' className='py-20 bg-gray-50'>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='text-center mb-16'>
-					<h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
+		<section id='services' className='py-12 sm:py-16 md:py-20 bg-gray-50'>
+			<div className='max-w-7xl mx-auto px-3 sm:px-4 lg:px-8'>
+				<div className='text-center mb-12 sm:mb-16'>
+					<h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6'>
 						Bizning Xizmatlarimiz
 					</h2>
-					<p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+					<p className='text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl sm:max-w-3xl mx-auto px-2'>
 						Dastlabki maslahatdan tortib, bitirishgacha bo&apos;lgan barcha
 						bosqichlarda chet elda o&apos;qish safaringiz uchun to&apos;liq
 						yordam beramiz.
@@ -101,7 +101,7 @@ const ServicesSection = () => {
 				</div>
 
 				{/* Main Services Grid */}
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16'>
 					{services.map((service, index) => (
 						<Card
 							key={index}

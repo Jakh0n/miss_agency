@@ -23,18 +23,18 @@ const Header = () => {
 
 	return (
 		<header className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200'>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='flex justify-between items-center h-16'>
+			<div className='max-w-7xl mx-auto px-3 sm:px-4 lg:px-8'>
+				<div className='flex justify-between items-center h-14 sm:h-16'>
 					{/* Logo */}
-					<Link href='/' className='flex items-center space-x-2'>
+					<Link href='/' className='flex items-center space-x-1 sm:space-x-2'>
 						<Image
 							src='/logo.jpg'
 							alt='Miss Twins'
-							width={36}
-							height={36}
-							className='rounded-full'
+							width={28}
+							height={28}
+							className='rounded-full sm:w-9 sm:h-9'
 						/>
-						<span className='text-xl font-bold text-red-900 '>
+						<span className='text-lg sm:text-xl font-bold text-red-900 '>
 							Miss<span className='text-blue-600'>Twins</span>
 						</span>
 					</Link>

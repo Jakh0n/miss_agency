@@ -128,15 +128,15 @@ const UniversitiesSection = () => {
 	return (
 		<section
 			id='universities'
-			className='py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-50'
+			className='py-8 md:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-indigo-50'
 		>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-7xl mx-auto px-3 sm:px-4 lg:px-8'>
 				{/* Section Header */}
-				<div className='text-center mb-8 md:mb-12'>
-					<h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
+				<div className='text-center mb-6 md:mb-8 lg:mb-12'>
+					<h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 md:mb-4'>
 						Hamkor Universitetlarimiz
 					</h2>
-					<p className='text-lg md:text-xl text-gray-600 max-w-3xl mx-auto'>
+					<p className='text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2'>
 						Biz sizni dunyoning eng yaxshi universitetlariga yo&apos;llaymiz.
 						Har bir universitet o&apos;zining noyob imkoniyatlari va grantlari
 						bilan ajralib turadi.
@@ -155,19 +155,19 @@ const UniversitiesSection = () => {
 								<div key={index} className='w-full flex-shrink-0'>
 									<Card className='border-0 shadow-lg bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.01]'>
 										<CardContent className='p-0'>
-											<div className='grid md:grid-cols-2 gap-0'>
+											<div className='grid grid-cols-1 md:grid-cols-2 gap-0'>
 												{/* University Image */}
-												<div className='relative h-64 md:h-72 lg:h-80 overflow-hidden'>
+												<div className='relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 overflow-hidden'>
 													<Image
 														src={university.image}
 														alt={university.name}
 														fill
-														className='object-cover rounded-l-2xl transition-transform duration-700 hover:scale-105'
+														className='object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none transition-transform duration-700 hover:scale-105'
 													/>
-													<div className='absolute top-4 right-4'>
-														<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1'>
-															<Star className='h-4 w-4 text-yellow-500 fill-current' />
-															<span className='text-sm font-semibold text-gray-700'>
+													<div className='absolute top-3 right-3 sm:top-4 sm:right-4'>
+														<div className='bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 sm:px-3 sm:py-1 flex items-center space-x-1'>
+															<Star className='h-3 w-3 sm:h-4 sm:w-4 text-yellow-500 fill-current' />
+															<span className='text-xs sm:text-sm font-semibold text-gray-700'>
 																{university.ranking}
 															</span>
 														</div>
@@ -175,35 +175,35 @@ const UniversitiesSection = () => {
 												</div>
 
 												{/* University Info */}
-												<div className='p-6 md:p-8 lg:p-10 flex flex-col justify-center'>
-													<div className='mb-4'>
-														<h3 className='text-xl md:text-2xl lg:text-2xl font-bold text-gray-900 mb-2'>
+												<div className='p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center'>
+													<div className='mb-3 sm:mb-4'>
+														<h3 className='text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2'>
 															{university.name}
 														</h3>
-														<div className='flex items-center space-x-4 text-gray-600 mb-4'>
+														<div className='flex items-center space-x-2 sm:space-x-4 text-gray-600 mb-3 sm:mb-4'>
 															<div className='flex items-center space-x-1'>
-																<MapPin className='h-4 w-4' />
-																<span className='text-sm'>
+																<MapPin className='h-3 w-3 sm:h-4 sm:w-4' />
+																<span className='text-xs sm:text-sm'>
 																	{university.city}, {university.country}
 																</span>
 															</div>
 														</div>
-														<p className='text-gray-600 leading-relaxed mb-4 text-sm md:text-base'>
+														<p className='text-gray-600 leading-relaxed mb-3 sm:mb-4 text-xs sm:text-sm md:text-base'>
 															{university.description}
 														</p>
 													</div>
 
 													{/* Programs */}
-													<div className='mb-4'>
-														<h4 className='text-base md:text-lg font-semibold text-gray-900 mb-2'>
+													<div className='mb-3 sm:mb-4'>
+														<h4 className='text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2'>
 															Mashhur Dasturlar
 														</h4>
-														<div className='flex flex-wrap gap-2'>
+														<div className='flex flex-wrap gap-1 sm:gap-2'>
 															{university.programs.map(
 																(program, programIndex) => (
 																	<span
 																		key={programIndex}
-																		className='bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs md:text-sm font-medium'
+																		className='bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium'
 																	>
 																		{program}
 																	</span>
@@ -213,33 +213,33 @@ const UniversitiesSection = () => {
 													</div>
 
 													{/* University Details */}
-													<div className='grid grid-cols-2 gap-3 mb-4'>
-														<div className='bg-gray-50 rounded-lg p-2 md:p-3'>
+													<div className='grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4'>
+														<div className='bg-gray-50 rounded-lg p-2 sm:p-3'>
 															<div className='flex items-center space-x-2 mb-1'>
-																<GraduationCap className='h-3 w-3 md:h-4 md:w-4 text-blue-600' />
-																<span className='text-xs md:text-sm font-medium text-gray-700'>
+																<GraduationCap className='h-3 w-3 text-blue-600' />
+																<span className='text-xs font-medium text-gray-700'>
 																	Til
 																</span>
 															</div>
-															<p className='text-xs md:text-sm text-gray-600'>
+															<p className='text-xs text-gray-600'>
 																{university.language}
 															</p>
 														</div>
-														<div className='bg-gray-50 rounded-lg p-2 md:p-3'>
+														<div className='bg-gray-50 rounded-lg p-2 sm:p-3'>
 															<div className='flex items-center space-x-2 mb-1'>
-																<Star className='h-3 w-3 md:h-4 md:w-4 text-green-600' />
-																<span className='text-xs md:text-sm font-medium text-gray-700'>
+																<Star className='h-3 w-3 text-green-600' />
+																<span className='text-xs font-medium text-gray-700'>
 																	Grantlar
 																</span>
 															</div>
-															<p className='text-xs md:text-sm text-gray-600'>
+															<p className='text-xs text-gray-600'>
 																{university.scholarship}
 															</p>
 														</div>
 													</div>
 
 													{/* CTA Button */}
-													<Button className='w-full bg-blue-600 hover:bg-blue-700 text-sm md:text-base py-2 md:py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg'>
+													<Button className='w-full bg-blue-600 hover:bg-blue-700 text-xs sm:text-sm md:text-base py-2 sm:py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg'>
 														Batafsil Ma&apos;lumot
 													</Button>
 												</div>
@@ -254,27 +254,27 @@ const UniversitiesSection = () => {
 					{/* Navigation Arrows */}
 					<button
 						onClick={prevSlide}
-						className='absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/95 backdrop-blur-md hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl opacity-0 group-hover:opacity-100 z-10'
+						className='absolute left-1 sm:left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/95 backdrop-blur-md hover:bg-white rounded-full p-1.5 sm:p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl opacity-70 group-hover:opacity-100 z-10'
 						aria-label='Oldingi universitet'
 					>
-						<ChevronLeft className='h-4 w-4 md:h-5 md:w-5 text-gray-700 hover:text-blue-600 transition-colors duration-200' />
+						<ChevronLeft className='h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-gray-700 hover:text-blue-600 transition-colors duration-200' />
 					</button>
 					<button
 						onClick={nextSlide}
-						className='absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/95 backdrop-blur-md hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl opacity-0 group-hover:opacity-100 z-10'
+						className='absolute right-1 sm:right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/95 backdrop-blur-md hover:bg-white rounded-full p-1.5 sm:p-2 md:p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl opacity-70 group-hover:opacity-100 z-10'
 						aria-label='Keyingi universitet'
 					>
-						<ChevronRight className='h-4 w-4 md:h-5 md:w-5 text-gray-700 hover:text-blue-600 transition-colors duration-200' />
+						<ChevronRight className='h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-gray-700 hover:text-blue-600 transition-colors duration-200' />
 					</button>
 				</div>
 
 				{/* Dots Indicator */}
-				<div className='flex justify-center space-x-2 mt-6'>
+				<div className='flex justify-center space-x-2 mt-4 sm:mt-6'>
 					{universities.map((_, index) => (
 						<button
 							key={index}
 							onClick={() => goToSlide(index)}
-							className={`w-3 h-3 rounded-full transition-all duration-300 ${
+							className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
 								index === currentIndex
 									? 'bg-blue-600 scale-125 shadow-md'
 									: 'bg-gray-300 hover:bg-blue-400 hover:scale-110'
