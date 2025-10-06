@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card'
 import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const TestimonialsSection = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
@@ -75,17 +75,17 @@ const TestimonialsSection = () => {
 		))
 	}
 
-	const nextSlide = () => {
+	const nextSlide = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex >= testimonials.length - 4 ? 0 : prevIndex + 1
 		)
-	}
+	}, [testimonials.length])
 
-	const prevSlide = () => {
+	const prevSlide = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex === 0 ? testimonials.length - 4 : prevIndex - 1
 		)
-	}
+	}, [testimonials.length])
 
 	// Keyboard navigation
 	useEffect(() => {

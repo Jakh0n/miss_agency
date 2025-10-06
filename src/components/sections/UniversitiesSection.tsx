@@ -10,11 +10,10 @@ import {
 	Star,
 } from 'lucide-react'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const UniversitiesSection = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
-	const [progress, setProgress] = useState(0)
 
 	const universities = [
 		{
@@ -96,45 +95,17 @@ const UniversitiesSection = () => {
 		},
 	]
 
-	const nextSlide = () => {
+	const nextSlide = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex === universities.length - 1 ? 0 : prevIndex + 1
 		)
-	}
+	}, [universities.length])
 
-	const prevSlide = () => {
+	const prevSlide = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex === 0 ? universities.length - 1 : prevIndex - 1
 		)
-	}
-
-	// Auto-play functionality with progress bar
-	useEffect(() => {
-		const interval = setInterval(() => {
-			nextSlide()
-		}, 5000) // Auto-advance every 5 seconds
-
-		return () => clearInterval(interval)
-	}, [currentIndex, nextSlide])
-
-	// Progress bar animation
-	useEffect(() => {
-		const progressInterval = setInterval(() => {
-			setProgress(prev => {
-				if (prev >= 100) {
-					return 0
-				}
-				return prev + 2
-			})
-		}, 100)
-
-		return () => clearInterval(progressInterval)
-	}, [currentIndex])
-
-	// Reset progress when slide changes
-	useEffect(() => {
-		setProgress(0)
-	}, [currentIndex])
+	}, [universities.length])
 
 	const goToSlide = (index: number) => {
 		setCurrentIndex(index)
@@ -297,31 +268,20 @@ const UniversitiesSection = () => {
 					</button>
 				</div>
 
-				{/* Dots Indicator with Progress */}
-				<div className='flex flex-col items-center space-y-3 mt-6'>
-					{/* Progress Bar */}
-					<div className='w-full max-w-xs bg-gray-200 rounded-full h-0.5 overflow-hidden'>
-						<div
-							className='bg-blue-600 h-full rounded-full transition-all duration-100 ease-linear'
-							style={{ width: `${progress}%` }}
+				{/* Dots Indicator */}
+				<div className='flex justify-center space-x-2 mt-6'>
+					{universities.map((_, index) => (
+						<button
+							key={index}
+							onClick={() => goToSlide(index)}
+							className={`w-3 h-3 rounded-full transition-all duration-300 ${
+								index === currentIndex
+									? 'bg-blue-600 scale-125 shadow-md'
+									: 'bg-gray-300 hover:bg-blue-400 hover:scale-110'
+							}`}
+							aria-label={`${index + 1}-universitet`}
 						/>
-					</div>
-
-					{/* Dots */}
-					<div className='flex justify-center space-x-2'>
-						{universities.map((_, index) => (
-							<button
-								key={index}
-								onClick={() => goToSlide(index)}
-								className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-									index === currentIndex
-										? 'bg-blue-600 scale-125 shadow-md'
-										: 'bg-gray-300 hover:bg-blue-400 hover:scale-110'
-								}`}
-								aria-label={`${index + 1}-universitet`}
-							/>
-						))}
-					</div>
+					))}
 				</div>
 			</div>
 		</section>
