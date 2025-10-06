@@ -94,9 +94,9 @@ const ServicesSection = () => {
 						Bizning Xizmatlarimiz
 					</h2>
 					<p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-						Dastlabki maslahatdan tortib, bitirishgacha bo\'lgan barcha
-						bosqichlarda chet elda o\'qish safaringiz uchun to\'liq yordam
-						beramiz.
+						Dastlabki maslahatdan tortib, bitirishgacha bo&apos;lgan barcha
+						bosqichlarda chet elda o&apos;qish safaringiz uchun to&apos;liq
+						yordam beramiz.
 					</p>
 				</div>
 
@@ -131,7 +131,7 @@ const ServicesSection = () => {
 									))}
 								</ul>
 								<Button className='w-full bg-blue-600 hover:bg-blue-700'>
-									Ko'proq Bilish
+									Ko&apos;proq Bilish
 								</Button>
 							</CardContent>
 						</Card>
@@ -141,7 +141,7 @@ const ServicesSection = () => {
 				{/* Additional Services */}
 				<div className='bg-white rounded-2xl p-8 shadow-lg'>
 					<h3 className='text-2xl font-bold text-gray-900 text-center mb-8'>
-						Qo'shimcha Yordam Xizmatlari
+						Qo&apos;shimcha Yordam Xizmatlari
 					</h3>
 					<div className='grid md:grid-cols-2 gap-8'>
 						{additionalServices.map((service, index) => (

@@ -115,7 +115,7 @@ const UniversitiesSection = () => {
 		}, 5000) // Auto-advance every 5 seconds
 
 		return () => clearInterval(interval)
-	}, [currentIndex])
+	}, [currentIndex, nextSlide])
 
 	// Progress bar animation
 	useEffect(() => {
@@ -152,7 +152,7 @@ const UniversitiesSection = () => {
 
 		window.addEventListener('keydown', handleKeyPress)
 		return () => window.removeEventListener('keydown', handleKeyPress)
-	}, [])
+	}, [nextSlide, prevSlide])
 
 	return (
 		<section

@@ -35,8 +35,9 @@ const HeroSection = () => {
 					{/* Subheading */}
 					<p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed'>
 						Biz ambitsiyali talabalarga dunyoning eng yaxshi universitetlarida
-						o'qish orzularini amalga oshirishda yordam beramiz. Ariza berishdan
-						tortib, bitirishgacha bo'lgan yo'lda siz bilan birga bo'lamiz.
+						o&apos;qish orzularini amalga oshirishda yordam beramiz. Ariza
+						berishdan tortib, bitirishgacha bo&apos;lgan yo&apos;lda siz bilan
+						birga bo&apos;lamiz.
 					</p>
 
 					{/* CTA Buttons */}
@@ -57,7 +58,7 @@ const HeroSection = () => {
 							size='lg'
 							className='text-lg px-8 py-4 h-auto border-2'
 						>
-							<Link href='#services'>Ko'proq Bilish</Link>
+							<Link href='#services'>Ko&apos;proq Bilish</Link>
 						</Button>
 					</div>
 

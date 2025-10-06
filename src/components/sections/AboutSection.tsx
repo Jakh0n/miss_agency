@@ -72,7 +72,7 @@ const AboutSection = () => {
 							Bizning Missiyamiz
 						</h3>
 						<p className='text-lg text-gray-700 leading-relaxed mb-8'>
-							Dunyoning eng yaxshi ta\'limiga kirish imkoniyatini
+							Dunyoning eng yaxshi ta&apos;limiga kirish imkoniyatini
 							demokratlashtirish orqali talabalarga akademik orzularini amalga
 							oshirish va muvaffaqiyatli xalqaro martaba qurish imkoniyatini
 							berish.

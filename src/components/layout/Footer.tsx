@@ -57,9 +57,9 @@ const Footer = () => {
 							<span className='text-xl font-bold'>MissTwins</span>
 						</Link>
 						<p className='text-gray-300 mb-6 leading-relaxed'>
-							Xalqaro ta\'limda ishonchli hamkoringiz. Biz talabalarga ekspert
-							maslahat va yordam bilan chet elda o\'qish orzularini amalga
-							oshirishda yordam beramiz.
+							Xalqaro ta&apos;limda ishonchli hamkoringiz. Biz talabalarga
+							ekspert maslahat va yordam bilan chet elda o&apos;qish orzularini
+							amalga oshirishda yordam beramiz.
 						</p>
 						<div className='space-y-3'>
 							<div className='flex items-center space-x-3'>
@@ -72,7 +72,9 @@ const Footer = () => {
 							</div>
 							<div className='flex items-center space-x-3'>
 								<MapPin className='h-5 w-5 text-blue-400' />
-								<span className='text-gray-300'>Toshkent, O\'zbekiston</span>
+								<span className='text-gray-300'>
+									Toshkent, O&apos;zbekiston
+								</span>
 							</div>
 						</div>
 					</div>

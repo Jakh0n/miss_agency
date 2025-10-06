@@ -87,10 +87,6 @@ const TestimonialsSection = () => {
 		)
 	}
 
-	const goToSlide = (index: number) => {
-		setCurrentIndex(index)
-	}
-
 	// Keyboard navigation
 	useEffect(() => {
 		const handleKeyPress = (event: KeyboardEvent) => {
@@ -103,7 +99,7 @@ const TestimonialsSection = () => {
 
 		window.addEventListener('keydown', handleKeyPress)
 		return () => window.removeEventListener('keydown', handleKeyPress)
-	}, [])
+	}, [nextSlide, prevSlide])
 
 	return (
 		<section id='testimonials' className='py-12 md:py-16 bg-white'>
